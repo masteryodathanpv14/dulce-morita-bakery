@@ -1,0 +1,3 @@
+Producto,Rendimiento_lote_unid,Tiempo_lote_min,Mano_obra_hora_COP,Overhead_hora_COP,Empaque_unit_COP,Margen_objetivo,IVA_venta
+Muffin de chocolate (sin relleno),12,45,12000,10000,0,0.55,0.00
+Muffin de vainilla (sin relleno),12,40,12000,10000,0,0.55,0.00

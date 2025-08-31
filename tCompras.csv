@@ -1,0 +1,16 @@
+Codigo,Fecha,Cantidad_compra,Unidad_compra,Precio_compra_COP,Proveedor
+HAR-001,2025-08-15,1,kg,5000,Proveedor A
+HAR-001,2025-08-30,1,kg,5200,Proveedor A
+AZU-001,2025-08-10,1,kg,4700,Proveedor A
+AZU-001,2025-08-30,1,kg,4800,Proveedor A
+HUE-001,2025-08-20,1,u,650,Proveedor C
+LEC-001,2025-08-18,1,l,3200,Proveedor D
+ACE-001,2025-08-12,1,l,9500,Proveedor D
+CAC-001,2025-08-22,1,kg,28000,Proveedor E
+ESS-001,2025-08-21,60,ml,6000,Proveedor G
+POL-001,2025-08-19,100,g,2500,Proveedor F
+BIC-001,2025-08-19,100,g,1500,Proveedor F
+SAL-001,2025-08-17,1,kg,2000,Proveedor F
+EMB-003,2025-08-25,1,u,90,Proveedor E
+EMB-002,2025-08-25,1,u,120,Proveedor E
+EMB-004,2025-08-25,1,u,800,Proveedor E

@@ -1,0 +1,14 @@
+Codigo,Insumo,Cantidad_compra,Unidad_compra,Precio_compra_COP,Merma_%,Categoria,Proveedor,Fecha_actualizacion
+HAR-001,Harina de trigo,1,kg,5200,0,MP,Proveedor A,2025-08-30
+AZU-001,Azúcar,1,kg,4800,0,MP,Proveedor A,2025-08-30
+HUE-001,Huevo,1,u,650,0,MP,Proveedor C,2025-08-30
+LEC-001,Leche,1,l,3200,0,MP,Proveedor D,2025-08-30
+ACE-001,Aceite vegetal,1,l,9500,0,MP,Proveedor D,2025-08-30
+CAC-001,Cacao en polvo,1,kg,28000,0,MP,Proveedor E,2025-08-30
+ESS-001,Esencia de vainilla,60,ml,6000,0,MP,Proveedor G,2025-08-30
+POL-001,Polvo de hornear,100,g,2500,0,MP,Proveedor F,2025-08-30
+BIC-001,Bicarbonato de sodio,100,g,1500,0,MP,Proveedor F,2025-08-30
+SAL-001,Sal,1,kg,2000,0,MP,Proveedor F,2025-08-30
+EMB-003,Capacillo para muffin,1,u,90,0,Empaque,Proveedor E,2025-08-30
+EMB-002,Bolsa celofán,1,u,120,0,Empaque,Proveedor E,2025-08-30
+EMB-004,Caja para 6 muffins,1,u,800,0,Empaque,Proveedor E,2025-08-30

@@ -26,7 +26,8 @@ costeo-pasteleria/
 
 ### Uso Rápido
 
-1. **Generar archivo Excel:**
+#### Generación Local
+1. **Generar archivo Excel manualmente:**
    ```bash
    python scripts/build_excel.py
    ```
@@ -35,9 +36,30 @@ costeo-pasteleria/
    - El archivo `costeo-pasteleria/modelo-costeo.xlsx` contiene todas las tablas y fórmulas configuradas
    - Incluye hojas para tInsumos, tProductos, tReceta, tCompras y Costeo
 
+#### Automatización via GitHub Actions
+El repositorio incluye un workflow de GitHub Actions que automatiza la generación del archivo Excel:
+
+1. **Triggers automáticos**: El workflow se ejecuta cuando:
+   - Se modifica cualquier archivo CSV en `costeo-pasteleria/`
+   - Se modifica el script `scripts/build_excel.py`
+   - Se ejecuta manualmente desde la interfaz de GitHub
+
+2. **Ejecución manual**:
+   - Ve a la pestaña "Actions" en GitHub
+   - Selecciona "Build Excel Costing Model"
+   - Haz clic en "Run workflow" y selecciona la rama `costeo-pasteleria`
+
+3. **Configuración requerida**:
+   - **IMPORTANTE**: Para que el workflow pueda hacer commits automáticos, ve a:
+     - Configuración del repositorio → Actions → General → Workflow permissions
+     - Selecciona "Read and write permissions"
+   - El workflow instalará automáticamente las dependencias desde `requirements.txt`
+   - El archivo Excel actualizado se commitea automáticamente si hay cambios
+
 3. **Actualizar precios:**
    - Modo simple: Editar directamente en `Insumos.csv` 
    - Modo avanzado: Agregar compras en `tCompras.csv` para histórico automático
+   - **Con automation**: Los cambios en CSVs en la rama `costeo-pasteleria` activarán automáticamente la regeneración del Excel
 
 ### Productos Incluidos
 

@@ -1,0 +1,4 @@
+Codigo,Nombre,Precio_compra_COP,Cantidad_compra,Unidad_compra,Merma_%,Proveedor
+H001,Harina de trigo,2500,1,kg,2,Proveedor A
+A001,Azúcar blanca,3200,1,kg,1,Proveedor B
+L001,Leche entera,4500,1,l,0,Proveedor C

@@ -1,0 +1,53 @@
+name: Generate Excel Costing Model
+
+on:
+  push:
+    paths:
+      - 'costeo-pasteleria/*.csv'
+      - 'scripts/build_excel.py'
+  pull_request:
+    paths:
+      - 'costeo-pasteleria/*.csv'
+      - 'scripts/build_excel.py'
+  workflow_dispatch:
+
+jobs:
+  generate-excel:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas openpyxl
+    
+    - name: Generate Excel model
+      run: |
+        python scripts/build_excel.py
+    
+    - name: Upload Excel artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: modelo-costeo-excel
+        path: costeo-pasteleria/modelo-costeo.xlsx
+        retention-days: 30
+    
+    - name: Commit generated Excel file
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add costeo-pasteleria/modelo-costeo.xlsx
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-update Excel costing model"
+          git push
+        fi
